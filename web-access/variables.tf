@@ -28,31 +28,11 @@ variable "port" {
 }
 
 # @group "Access"
+# @show_if "service_type=NodePort"
 variable "node_port" {
   type        = number
   description = "(Optional) Node Port. By default K8S automatically set free Node Port"
   default = 30000
-}
-
-# @group "Access"
-variable "domain_name" {
-  type        = string
-  description = "Description: (Otional) Global domain name for all URL"
-  default = "example.com"
-}
-
-# @group "Access"
-variable "ingress_class_name" {
-  type        = string
-  description = "(Optional) Ingress Class name"
-  default = "nginx"
-}
-
-# @group "Access"
-variable "ingress_annotation" {
-  type        = map(string)
-  description = "(Optional) Custom annotations"
-  default = {}
 }
 
 # @group "Resources"

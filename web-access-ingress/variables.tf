@@ -35,13 +35,6 @@ variable "node_port" {
 }
 
 # @group "Access"
-variable "domain_name" {
-  type        = string
-  description = "Description: (Otional) Global domain name for all URL"
-  default = "example.com"
-}
-
-# @group "Access"
 variable "ingress_class_name" {
   type        = string
   description = "(Optional) Ingress Class name"
